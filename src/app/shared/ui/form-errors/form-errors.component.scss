@@ -1,0 +1,9 @@
+.list-error {
+  text-align: left;
+  .error {
+    margin-right: auto;
+    margin-bottom: 0;
+    color: var(--red-color);
+    font-weight: 700;
+  }
+}

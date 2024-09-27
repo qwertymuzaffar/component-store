@@ -1,0 +1,27 @@
+.setting {
+  text-align: center;
+
+  .setting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 620px;
+    margin: 16px auto;
+
+    .update-btn {
+      margin-left: auto;
+      color: var(--white-color);
+      background-color: var(--green-color);
+      border-color: var(--green-color);
+
+      &:hover {
+        background-color: var(--extra-green-color);
+        border-color: var(--extra-green-color);
+      }
+    }
+
+    .logout-btn {
+      margin-right: auto;
+    }
+  }
+}

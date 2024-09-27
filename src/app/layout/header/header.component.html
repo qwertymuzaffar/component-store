@@ -1,0 +1,24 @@
+<header>
+  <a routerLink="" class="logo">conduit</a>
+  <ul class="nav-bar">
+    <ng-container *ngFor="let item of menu(); let idx = index">
+      <li
+        [routerLink]="item.url"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <i [class]="item.icon + ' me-1'"></i>{{ item.title }}
+      </li>
+    </ng-container>
+    <ng-container *ngIf="currentUser() as user">
+      <li
+        [routerLink]="['@' + user.username]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <img class="user-avatar" [src]="user.image" alt="user.username">
+        {{ user.username }}
+      </li>
+    </ng-container>
+  </ul>
+</header>
